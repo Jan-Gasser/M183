@@ -32,16 +32,17 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
             bool intrusion_detected = false;
         
             // Hints
-            Request.Browser.Platform;
-            Request.UserHostAddress;
+            var browser = Request.Browser.Platform;
+            var address = Request.UserHostAddress;
 
             Lab4IntrusionLog model = new Lab4IntrusionLog();
 
             // Hint:
-            model.logIntrusion();
+            
 
             if (intrusion_detected)
             {
+                model.logIntrusion(address, browser, "An intrusion detected.");
                 return RedirectToAction("Index", "Lab4");
             }
             else
