@@ -32,13 +32,13 @@ namespace Pruefung_Praktisch_Musterloesung.Controllers
             bool intrusion_detected = false;
         
             // Hints
-            // Request.Browser.Platform;
-            // Request.UserHostAddress;
+            Request.Browser.Platform;
+            Request.UserHostAddress;
 
             Lab4IntrusionLog model = new Lab4IntrusionLog();
 
             // Hint:
-            //model.logIntrusion();
+            model.logIntrusion();
 
             if (intrusion_detected)
             {
